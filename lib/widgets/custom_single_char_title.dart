@@ -11,9 +11,9 @@ class CustomSingleCharTitle extends StatelessWidget {
       height: MediaQuery.sizeOf(context).height * 0.035,
       width: MediaQuery.sizeOf(context).width * 0.07,
       alignment: Alignment.center,
-      margin: const EdgeInsets.only(right: 8),
+      margin: const EdgeInsets.only(right: 6),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(2),
+        borderRadius: BorderRadius.circular(4),
         color: Colors.black,
       ),
       child: Text(

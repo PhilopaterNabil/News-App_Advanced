@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app_team/models/article_model.dart';
 import 'package:news_app_team/services/news_service.dart';
+import 'package:news_app_team/widgets/error_message.dart';
 import 'package:news_app_team/widgets/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
@@ -26,32 +27,24 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleModel>>(
-        future: future,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return NewsListView(
-              articles: snapshot.data!,
-            );
-          } else if (snapshot.hasError) {
-            return const SliverToBoxAdapter(
-              child: ErrorMessage(),
-            );
-          } else {
-            return const SliverToBoxAdapter(
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
-          }
-        });
-  }
-}
-
-class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text('oops there was an error, try later');
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return NewsListView(
+            articles: snapshot.data!,
+          );
+        } else if (snapshot.hasError) {
+          return const SliverToBoxAdapter(
+            child: ErrorMessage(),
+          );
+        } else {
+          return const SliverToBoxAdapter(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+      },
+    );
   }
 }
