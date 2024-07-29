@@ -22,6 +22,11 @@ class HomeScreen extends StatelessWidget {
             ),
             NewsListViewBuilder(
               category: 'general',
+              imageEqualNull: true,
+            ),
+            NewsListViewBuilder(
+              category: 'general',
+              imageEqualNull: false,
             ),
           ],
         ),

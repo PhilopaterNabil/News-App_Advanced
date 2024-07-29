@@ -24,6 +24,11 @@ class CategoryScreen extends StatelessWidget {
         slivers: [
           NewsListViewBuilder(
             category: category,
+            imageEqualNull: true,
+          ),
+          NewsListViewBuilder(
+            category: category,
+            imageEqualNull: false,
           ),
         ],
       ),
