@@ -6,9 +6,11 @@ import 'package:news_app_team/widgets/error_message.dart';
 import 'package:news_app_team/widgets/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
-  const NewsListViewBuilder({super.key, required this.category});
+  const NewsListViewBuilder(
+      {super.key, required this.category, required this.imageEqualNull});
 
   final String category;
+  final bool imageEqualNull;
 
   @override
   State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
@@ -32,17 +34,20 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
         if (snapshot.hasData) {
           return NewsListView(
             articles: snapshot.data!,
+            imageEqualNull: widget.imageEqualNull,
           );
         } else if (snapshot.hasError) {
           return const SliverToBoxAdapter(
             child: ErrorMessage(),
           );
         } else {
-          return const SliverToBoxAdapter(
-            child: Center(
-              child: CircularProgressIndicator(),
-            ),
-          );
+          return widget.imageEqualNull == true
+              ? const SliverToBoxAdapter()
+              : const SliverToBoxAdapter(
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
         }
       },
     );
