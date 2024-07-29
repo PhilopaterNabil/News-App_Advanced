@@ -22,17 +22,20 @@ class CategoryScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: CustomScrollView(
-        slivers: [
-          NewsListViewBuilder(
-            category: category,
-            imageEqualNull: true,
-          ),
-          NewsListViewBuilder(
-            category: category,
-            imageEqualNull: false,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: CustomScrollView(
+          slivers: [
+            NewsListViewBuilder(
+              category: category,
+              imageEqualNull: true,
+            ),
+            NewsListViewBuilder(
+              category: category,
+              imageEqualNull: false,
+            ),
+          ],
+        ),
       ),
     );
   }
