@@ -20,12 +20,13 @@ class NewsTile extends StatelessWidget {
             : ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: CachedNetworkImage(
+                  height: 210,
                   imageUrl: articleModel.image ?? '',
                   placeholder: (context, url) => Shimmer.fromColors(
                     baseColor: Colors.grey.shade300,
                     highlightColor: Colors.white,
                     child: Container(
-                      height: 200,
+                      height: 210,
                       width: double.infinity,
                       color: Colors.grey,
                     ),

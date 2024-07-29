@@ -16,7 +16,9 @@ class CategoryScreen extends StatelessWidget {
         title: Text(
           category,
           style: const TextStyle(
-              color: Colors.orange, fontWeight: FontWeight.bold),
+            color: Colors.purpleAccent,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         centerTitle: true,
       ),
