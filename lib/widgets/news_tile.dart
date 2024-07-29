@@ -4,7 +4,10 @@ import 'package:news_app_team/models/article_model.dart';
 import 'package:shimmer/shimmer.dart';
 
 class NewsTile extends StatelessWidget {
-  const NewsTile({super.key, required this.articleModel});
+  const NewsTile(
+      {super.key, required this.articleModel, required this.imageEqualNull});
+
+  final bool imageEqualNull;
 
   final ArticleModel articleModel;
   @override
@@ -12,31 +15,24 @@ class NewsTile extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(6),
-          child: CachedNetworkImage(
-            imageUrl: articleModel.image ?? '',
-            placeholder: (context, url) => Shimmer.fromColors(
-              baseColor: Colors.grey.shade300,
-              highlightColor: Colors.white,
-              child: Container(
-                height: 200,
-                width: double.infinity,
-                color: Colors.grey,
+        imageEqualNull == true
+            ? const SizedBox()
+            : ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: CachedNetworkImage(
+                  imageUrl: articleModel.image ?? '',
+                  placeholder: (context, url) => Shimmer.fromColors(
+                    baseColor: Colors.grey.shade300,
+                    highlightColor: Colors.white,
+                    child: Container(
+                      height: 200,
+                      width: double.infinity,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-          ),
-          // Image.network(
-          //   articleModel.image!,
-          //   height: 200,
-          //   width: double.infinity,
-          //   fit: BoxFit.cover,
-          // ),
-        ),
-        const SizedBox(
-          height: 12,
-        ),
+        const SizedBox(height: 12),
         Text(
           articleModel.title,
           maxLines: 2,
