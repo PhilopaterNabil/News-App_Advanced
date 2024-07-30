@@ -47,11 +47,13 @@ class NewsTile extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        Text(
-          articleModel.subTitle ?? '',
-          maxLines: 2,
-          style: const TextStyle(color: Colors.grey, fontSize: 14),
-        )
+        imageEqualNull == true
+            ? const SizedBox()
+            : Text(
+                articleModel.subTitle ?? '',
+                maxLines: 2,
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
+              )
       ],
     );
   }

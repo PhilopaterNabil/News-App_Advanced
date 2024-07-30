@@ -9,7 +9,7 @@ class CirclePersonAvatarAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 2),
       child: IconButton(
-        onPressed: () => Scaffold.of(context).openDrawer(),
+        onPressed: () {},
         icon: Stack(
           alignment: Alignment.center,
           children: [

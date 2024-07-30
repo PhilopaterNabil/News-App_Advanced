@@ -15,7 +15,7 @@ class NewsListView extends StatelessWidget {
     return imageEqualNull == true
         ? SliverToBoxAdapter(
             child: SizedBox(
-              height: 140,
+              height: 90,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: articles.length,
@@ -23,6 +23,11 @@ class NewsListView extends StatelessWidget {
                   return Container(
                     width: 300,
                     margin: const EdgeInsets.only(right: 22),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Colors.black12,
+                    ),
                     child: NewsTile(
                       articleModel: articles[index],
                       imageEqualNull: imageEqualNull,

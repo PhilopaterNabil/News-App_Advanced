@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_team/widgets/custom_home_app_bar.dart';
 import 'package:news_app_team/widgets/custom_home_body.dart';
-import 'package:news_app_team/widgets/custom_home_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomHomeAppBar(),
-      drawer: CustomHomeDrawer(),
+      // drawer: CustomHomeDrawer(),
       body: CustomHomeBody(),
     );
   }
