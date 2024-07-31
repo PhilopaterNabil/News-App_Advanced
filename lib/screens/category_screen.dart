@@ -30,6 +30,7 @@ class CategoryScreen extends StatelessWidget {
               category: category,
               imageEqualNull: true,
             ),
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
             NewsListViewBuilder(
               category: category,
               imageEqualNull: false,
