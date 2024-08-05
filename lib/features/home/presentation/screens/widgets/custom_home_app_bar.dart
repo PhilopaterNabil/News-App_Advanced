@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_team/widgets/circle_person_avatar_app_Bar.dart';
-import 'package:news_app_team/widgets/custom_title_app_bar.dart';
+import 'package:news_app_team/features/home/presentation/screens/widgets/circle_person_avatar_app_Bar.dart';
+import 'package:news_app_team/features/home/presentation/screens/widgets/custom_title_app_bar.dart';
 
 class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomHomeAppBar({super.key});

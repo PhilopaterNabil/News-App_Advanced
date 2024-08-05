@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_team/widgets/news_list_view_builder.dart';
+import 'package:news_app_team/features/home/presentation/screens/widgets/news_list_view_builder.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key, required this.category});

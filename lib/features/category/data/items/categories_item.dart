@@ -1,4 +1,4 @@
-import 'package:news_app_team/models/category_model.dart';
+import 'package:news_app_team/features/category/data/models/category_model.dart';
 
 const List<CategoryModel> categoriesItem = [
   CategoryModel(categoryName: "Health"),

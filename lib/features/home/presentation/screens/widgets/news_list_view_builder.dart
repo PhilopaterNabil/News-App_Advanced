@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app_team/models/article_model.dart';
-import 'package:news_app_team/services/news_service.dart';
-import 'package:news_app_team/widgets/error_message.dart';
-import 'package:news_app_team/widgets/news_list_view.dart';
+import 'package:news_app_team/features/home/data/models/article_model.dart';
+import 'package:news_app_team/features/home/data/services/news_service.dart';
+import 'package:news_app_team/features/home/presentation/screens/widgets/error_message.dart';
+import 'package:news_app_team/features/home/presentation/screens/widgets/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder(

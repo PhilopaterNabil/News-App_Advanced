@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app_team/models/article_model.dart';
+import 'package:news_app_team/features/home/data/models/article_model.dart';
 import 'package:shimmer/shimmer.dart';
 
 class NewsTile extends StatelessWidget {
